@@ -1,0 +1,80 @@
+﻿@model FinalProject.Models.SMS
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0.5">
+<link href="~/Content/Site.css" rel="stylesheet" />
+@Styles.Render("~/LoginStyle/css")
+<head>   
+
+
+     </head>
+
+
+<h2 id="Title">Login Welcome to SMS.net <br /><br />
+
+    
+    Send Messages Worldwide </h2>
+<body>
+    
+    @using (Html.BeginForm("Login", "Login"))
+    {
+        <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+       
+
+        <!-- Inline CSS based on choices in "Settings" tab -->
+      
+
+        <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+        <div class="bootstrap-iso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form method="post">
+                            <div class="form-group col-md-10">
+                               
+                             
+                                <center>
+                                
+                                        @Html.LabelFor(model => model.Username)
+</center>
+                                        <br />
+
+                                        @Html.ValidationMessageFor(model => model.Username)
+                                <center> @Html.TextBoxFor(model => model.Username, new { @class = "form-control col-sm-2", placeholder = "Username", tabindex = 1 })</center>
+</div>
+                            <br />
+                          
+                            <div class="form-group ">
+                            
+                                <center>
+                                    @Html.LabelFor(model => model.RegisterPassword)</center>
+                                        <br />
+
+                                <center>
+                                    @Html.ValidationMessageFor(model => model.RegisterPassword)</center>
+                                <center>  @Html.PasswordFor(model => model.RegisterPassword, new { @class = "form-control", placeholder = "Password", tabindex = 1 })</center>
+</div>
+                            <div class="form-group">
+                                <div>
+                                    <center>
+                                        <button class="btn btn-primary" name="submit" type="submit"><center>
+    Submit
+</button>
+</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+    <h3 id="RegisterLink">@Html.ActionLink("Not Registered yet?", "Register","Register")</h3>
+
+
+ 
+</body>         

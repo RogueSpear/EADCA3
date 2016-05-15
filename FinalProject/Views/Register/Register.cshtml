@@ -1,0 +1,83 @@
+﻿@model FinalProject.Models.SMS
+
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+<center>
+    <h2>Register</h2></center>
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0.5">
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    @using (Html.BeginForm("Register", "Register"))
+    {
+
+
+
+
+        <div class="editor -label">
+            <center> @Html.LabelFor(model => model.Username)</center>
+        </div>
+
+        <div class="editor -label">
+
+            <center>@Html.TextBoxFor(model => model.Username, new { @class = "form-control", placeholder = "Your User Name", tabindex = 1 }) @Html.ValidationMessageFor(model => model.Username)</center>
+</div>
+
+
+
+
+
+
+        <div class="editor -label">
+            <center> @Html.LabelFor(model => model.FirstName)</center>
+</div>
+
+        <div class="col-md-6">
+
+            <center> @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", placeholder = "Your First Name here", tabindex = 1 })@Html.ValidationMessageFor(model => model.FirstName)</center>
+</div>
+
+        <div class="editor -label">
+            <center>@Html.LabelFor(model => model.LastName)</center>
+</div>
+
+        <div class="editor -label">
+
+            <center> @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", placeholder = "Your Last Name here", tabindex = 1 }) @Html.ValidationMessageFor(model => model.LastName)</center>
+</div>
+
+        <div class="editor -label">
+            <center>  @Html.LabelFor(model => model.MobileNumber)</center>
+</div>
+
+        <div class="editor -label">
+
+            <center>@Html.TextBoxFor(model => model.MobileNumber, new { @class = "form-control", placeholder = "Your Mobile Number here", tabindex = 1 }) @Html.ValidationMessageFor(model => model.MobileNumber)</center>
+</div>
+
+        <div class="editor -label">
+            <center>  @Html.LabelFor(model => model.RegisterPassword)</center>
+</div>
+
+        <div class="editor -label">
+
+            <center>  @Html.PasswordFor(model => model.RegisterPassword, new { @class = "form-control", placeholder = "Your Password here", tabindex = 1 })@Html.ValidationMessageFor(model => model.RegisterPassword)</center>
+</div>
+
+
+
+
+<center>
+    <div class="form-group">
+
+
+        <button class="btn btn-primary " name="submit" type="submit" onclick="Register">
+            Register
+        </button>
+    </div>
+</center>
+
+    }

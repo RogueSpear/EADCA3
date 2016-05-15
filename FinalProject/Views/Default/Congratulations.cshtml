@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FinalProject.Models.SMS>
+
+@{
+    ViewBag.Title = "Congratulations";
+}
+
+
+
+<h1>This is the message you have sent ...</h1><br />
+<h2>@Session["MyMessage"]</h2> 
+
+<br />
+
+<h2>You have sent the message to the following person<br /> @Session["NameOfSender"]</h2>
+
+
+
+
+
+
+<h2>And the number you sent it to is @Session["mynumber"]</h2>
+
+
+<h3>@Html.ActionLink("Would you like to send another SMS?", "Nyform")</h3>
+
+
+

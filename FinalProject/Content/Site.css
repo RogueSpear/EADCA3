@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background-color:orange;
+    font-size:30px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+   .bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+    }
+
+        .bootstrap-iso form button, .bootstrap-iso form button:hover {
+            color: white !important;
+        }
+
+    .asteriskField {
+        color: red;
+    }
+
+    .form-control{
+         font-size:30px;
+        
+
+    }
+
+
+  #RegisterLink{
+       margin-left:40%;
+       color:green;
+   }
+
+      #RegisterLink{
+       margin-left:40%;
+       color:green;
+   }
+    
+   #Title{
+
+       margin-left:40%;
+       font-size:30px;
+       color:green;
+
+   }
+
+   @media(max-width: 500px) {
+  #Title,#RegisterLink {
+    font-size: 15px;
+    font-weight: bold;
+   
+   
+  }
+}
+
+    @media(max-width: 500px) {
+  .form-control,.form-group,.btn btn-primary{
+      font-size:20px;
+
+   
+    
+  }
+}

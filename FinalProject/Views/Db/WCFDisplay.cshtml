@@ -1,0 +1,14 @@
+﻿@model IEnumerable < WcfMvc.Contact>
+
+@{ 
+
+<h1>This is WCF displaying Contacts </h1>
+    foreach (var item in Model)
+    {
+        <h3>@item.FirstName</h3>   
+
+   <h3>@item.CustomersFriendNumber</h3>
+    }
+
+
+}

@@ -1,0 +1,38 @@
+﻿@model FinalProject.Models.Contacts
+@{
+    ViewBag.Title = "MyContactadd";
+}
+
+<h2>@Session["name"]  <br />
+    Please enter persons name and modile number <br/>
+   
+    </h2>
+
+@using (Html.BeginForm("MyContactadd", "AddContact"))
+{
+
+        <div class="editor -label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+
+        <div class="editor -label">
+            @Html.ValidationMessageFor(model => model.FirstName)
+            @Html.TextBoxFor(model => model.FirstName, new { @value =  @class = "form-control", placeholder = "Persons Name here", tabindex = 1 })
+        </div>
+
+        <div class="editor -label">
+            @Html.ValidationMessageFor(model => model.CustomersFriendNumber)
+            @Html.TextBoxFor(model => model.CustomersFriendNumber, new { @class = "form-control", placeholder = "Persons Mobile Number here", tabindex = 1 })
+        </div>
+
+
+
+
+<div class="form-group">
+    <div>
+        <button class="btn btn-primary " name="submit" type="submit" onclick="location.href='@Url.Action("ContactDisplay", "Contacts")'">
+            Add Contact
+        </button>
+    </div>
+</div>
+}

@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "ErrorPage";
+}
+
+<h2>ErrorPage</h2>
+<h2>Im sorry but the details you entered are not in our system  please try again @Html.ActionLink("Back to form", "Nyform")</h2>
+
+<h5> Or you can send a message from our list of contacts here @Html.ActionLink("Back to form", "ContactDisplay") </h5>
+<br />
+
+@ViewBag.error;

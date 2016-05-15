@@ -1,0 +1,78 @@
+﻿@model FinalProject.Models.SMS
+
+
+
+@{
+    ViewBag.Title = "Nyform";
+}
+
+
+
+
+<h2>Welcome to your Profile <br />  @Session["MYNAME"]</h2>
+
+
+
+
+<div id="Hello"></div>
+
+
+@using (Html.BeginForm("Nyform","Default"))
+{
+    <fieldset>
+
+
+   
+
+
+
+
+
+        <div  class="editor -label">
+            @Html.LabelFor(model => model.MobileNumber)
+        </div> 
+        
+
+        <div class="editor -label">
+
+            @Html.TextBoxFor(model => model.MobileNumber, new {@value = ViewBag.number, @class = "form-control", placeholder = "Number", tabindex = 1 })
+            @Html.ValidationMessageFor(model => model.MobileNumber)
+        </div>
+
+
+        <div class="editor -label">
+            @Html.LabelFor(model => model.SmsMessage)
+        </div>
+
+        <div class="editor -label">
+
+            @Html.TextAreaFor(model => model.SmsMessage, new { @class = "form-control", placeholder = @ViewBag.test, tabindex = 1 })
+            @Html.ValidationMessageFor(model => model.SmsMessage)
+        </div>
+
+
+
+
+
+
+
+
+      
+        <div class="form-group">
+            <div>
+                <button class="btn btn-primary " name="Send message" type="submit" >
+                    Send message
+                </button>
+            </div>
+            </div>
+
+
+
+</fieldset>
+
+    
+
+}
+
+@Scripts.Render("~/bundles/jqueryui")
+<script src="~/Models/Stylejs.js"></script>
